@@ -1,4 +1,4 @@
-FROM samirkherraz/alpine-s6
+FROM dotriver/alpine-s6
 
 ENV DATABASE_HOST=localhost \
     DATABASE_PORT=3306 \

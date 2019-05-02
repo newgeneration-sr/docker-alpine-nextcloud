@@ -23,7 +23,7 @@ version: '3.1'
 services:
 
   nextcloud:
-    image: samirkherraz/nextcloud
+    image: dotriver/nextcloud
     environment:
         - DATABASE_HOST=mariadb
         - DATABASE_PORT=3306
@@ -49,7 +49,7 @@ services:
       mode: global
 
   mariadb:
-    image: samirkherraz/mariadb
+    image: dotriver/mariadb
     environment:
       - ROOT_PASSWORD=password
       - DB_0_NAME=nextcloud
