@@ -141,7 +141,7 @@ config(){
         echo ">>> Already Configured"
     fi
     
-    echo ">>> Switching to vtigercrm nginx conf"
+    echo ">>> Switching to nextcloud nginx conf"
     switch_nginx_conf
 
     echo 0 > /tmp/nextcloud_configured
