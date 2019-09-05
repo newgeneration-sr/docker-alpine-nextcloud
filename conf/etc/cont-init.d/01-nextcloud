@@ -93,9 +93,7 @@ install(){
         if [ ! $CONFIGURED -eq 0 ]
         then
             VERSION=$(curl -s -L https://api.github.com/repos/nextcloud/server/tags \
-            | grep "name" | cut -d '"' -f4 | egrep "v([0-9].?)*$" | sed -e 's/v//g' \
-            | sort -r | head -n 1 )
-
+            | grep "name" | cut -d '"' -f4 | egrep "v([0-9].?)*$" | sed -e 's/v//g' | head -n 1  )
             echo ">>> Downloading $VERSION"
             curl -s -L https://download.nextcloud.com/server/releases/nextcloud-${VERSION}.zip \
             --output /tmp/nextcloud-${VERSION}.zip ||  return 1 
@@ -142,7 +140,7 @@ config(){
         echo ">>> Already Configured"
     fi
     
-    echo ">>> Switching to vtigercrm nginx conf"
+    echo ">>> Switching to nextcloud nginx conf"
     switch_nginx_conf
 
     echo 0 > /tmp/nextcloud_configured
