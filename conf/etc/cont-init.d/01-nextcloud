@@ -92,13 +92,13 @@ install(){
     then
         if [ ! $CONFIGURED -eq 0 ]
         then
-            VERSION=$(wget -q -O - https://api.github.com/repos/nextcloud/server/tags \
+            VERSION=$(curl -s -L https://api.github.com/repos/nextcloud/server/tags \
             | grep "name" | cut -d '"' -f4 | egrep "v([0-9].?)*$" | sed -e 's/v//g' \
             | sort -r | head -n 1 )
 
             echo ">>> Downloading $VERSION"
-            wget https://download.nextcloud.com/server/releases/nextcloud-${VERSION}.zip \
-            -O /tmp/nextcloud-${VERSION}.zip ||  return 1 
+            curl -s -L https://download.nextcloud.com/server/releases/nextcloud-${VERSION}.zip \
+            --output /tmp/nextcloud-${VERSION}.zip ||  return 1 
 
             echo ">>> Unzipping "
             unzip -q /tmp/nextcloud-${VERSION}.zip -d /var/www/ ||  return 1
