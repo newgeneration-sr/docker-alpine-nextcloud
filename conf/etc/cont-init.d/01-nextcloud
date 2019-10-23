@@ -198,5 +198,4 @@ success(){
     echo "0" > /tmp/nextcloud
     exit 0
 }
-
 install && config && setup_trusted_domains && success || fail

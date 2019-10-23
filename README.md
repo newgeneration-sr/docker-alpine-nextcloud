@@ -17,8 +17,7 @@
 # Compose file example
 
 ```
-
-version: '3.1'
+version: '3'
 
 services:
 
@@ -32,22 +31,14 @@ services:
         - DATABASE_PASSWORD=password
         - ADMIN_USERNAME=admin
         - ADMIN_PASSWORD=password
-        - TRUSTED_DOMAIN_0=172.17.0.1:8080
-        - TRUSTED_DOMAIN_1=box.example.org
+        - TRUSTED_DOMAIN_0=127.0.0.1:8080
     ports:
       - 8080:80
     volumes:
       - nextcloud-data:/var/www/nextcloud/
     networks:
       default:
-    deploy:
-      resources:
-        limits:
-          memory: 256M
-      restart_policy:
-        condition: on-failure
-      mode: global
-
+  
   mariadb:
     image: dotriver/mariadb
     environment:
@@ -62,14 +53,7 @@ services:
       - mariadb-config:/etc/mysql/
     networks:
       default:
-    deploy:
-      resources:
-        limits:
-          memory: 256M
-      restart_policy:
-        condition: on-failure
-      mode: global
-
+    
 volumes:
     nextcloud-data:
     mariadb-data:
