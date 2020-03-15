@@ -169,6 +169,8 @@ setup_trusted_domains(){
 setup_memcached(){
     echo ">>> Setting up Memcached"
     MEMCACHED="
+        'overwriteprotocol' => 'https',
+        'trusted_proxies' => ['0.0.0.0'],
         'memcache.local' => '\\OC\\Memcache\\Memcached', 
         'memcache.distributed' => '\\OC\\Memcache\\Memcached',
         'memcached_servers' => 
