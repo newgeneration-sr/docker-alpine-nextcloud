@@ -92,8 +92,9 @@ install(){
     then
         if [ ! $CONFIGURED -eq 0 ]
         then
-            VERSION=$(curl -s -L https://api.github.com/repos/nextcloud/server/tags \
-            | grep "name" | cut -d '"' -f4 | egrep "v([0-9].?)*$" | sed -e 's/v//g' | head -n 1  )
+            #VERSION=$(curl -s -L https://api.github.com/repos/nextcloud/server/tags \
+            #| grep "name" | cut -d '"' -f4 | egrep "v([0-9].?)*$" | sed -e 's/v//g' | head -n 1  )
+            VERSION="18.0.4"
             echo ">>> Downloading $VERSION"
             curl -s -L https://download.nextcloud.com/server/releases/nextcloud-${VERSION}.zip \
             --output /tmp/nextcloud-${VERSION}.zip ||  return 1 
