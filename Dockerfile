@@ -10,7 +10,7 @@ ENV DATABASE_HOST=localhost \
     TRUSTED_DOMAIN_0=localhost 
 
 RUN set -x \
-    && apk --no-cache add curl php7 php7-fpm php7-gd php7-intl php7-ldap php7-memcached php7-pcntl php7-pdo php7-zip php7-mbstring php7-dom php7-xmlwriter php7-xmlreader php7-xml php7-ctype php7-json php7-iconv php7-simplexml php7-curl php7-pdo_mysql php7-posix php7-cli php7-mcrypt php7-opcache php7-fileinfo php7-imagick memcached
+    && apk --no-cache add curl php7 php7-fpm php7-gd php7-intl php7-ldap php7-memcached php7-pcntl php7-pdo php7-zip php7-mbstring php7-dom php7-xmlwriter php7-xmlreader php7-xml php7-ctype php7-json php7-iconv php7-simplexml php7-curl php7-pdo_mysql php7-posix php7-cli php7-mcrypt php7-opcache php7-fileinfo php7-imagick php7-gmp php7-bcmath memcached 
 
 RUN set -x \
     && apk --no-cache add nginx mysql-client \
