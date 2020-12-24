@@ -1,4 +1,10 @@
+![docker build automated](https://img.shields.io/docker/cloud/automated/dotriver/nextcloud)
+![docker build status](https://img.shields.io/docker/cloud/build/dotriver/nextcloud)
+![docker build status](https://img.shields.io/docker/cloud/pulls/dotriver/nextcloud)
+
 # Nextcloud on Alpine Linux + S6 Overlay
+
+Nextcloud documentation [here](https://docs.nextcloud.com/).
 
 # Auto configuration parameters :
 
@@ -11,8 +17,6 @@
 - ADMIN_PASSWORD=password ( Nextcloud admin password  )
 - TRUSTED_DOMAIN_0=localhost  ( Nextcloud trusted domain )
 - TRUSTED_DOMAIN_1=box.example.org  ( You can add many trusted domains by adding TRUSTED_DOMAIN_X = domain )
-
-
 
 # Compose file example
 
