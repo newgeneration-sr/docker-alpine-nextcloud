@@ -1,6 +1,6 @@
 ![docker build automated](https://img.shields.io/docker/cloud/automated/dotriver/nextcloud)
 ![docker build status](https://img.shields.io/docker/cloud/build/dotriver/nextcloud)
-![docker build status](https://img.shields.io/docker/cloud/pulls/dotriver/nextcloud)
+![docker build status](https://img.shields.io/docker/pulls/dotriver/nextcloud)
 
 # Nextcloud on Alpine Linux + S6 Overlay
 
